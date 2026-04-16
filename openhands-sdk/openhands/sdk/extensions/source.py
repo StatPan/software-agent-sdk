@@ -44,9 +44,12 @@ def parse_github_url(url: str) -> GitHubURLComponents | None:
     return None
 
 
+LOCAL_PREFIXES = ("./", "../", "/", "~", "file://")
+
+
 def is_local_path(source: str) -> bool:
     """Check if source is a local path (./, ../, /, ~, file://)."""
-    return any(source.startswith(p) for p in ("./", "../", "/", "~", "file://"))
+    return source.startswith(LOCAL_PREFIXES)
 
 
 def validate_source_path(source: str) -> str:

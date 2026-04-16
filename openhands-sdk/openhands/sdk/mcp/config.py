@@ -4,8 +4,6 @@ Handles ``.mcp.json`` discovery, ``${VAR}`` / ``${VAR:-default}`` expansion,
 and validation via :class:`fastmcp.mcp_config.MCPConfig`.
 """
 
-from __future__ import annotations
-
 import json
 import os
 import re

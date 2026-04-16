@@ -11,8 +11,8 @@ from fastmcp.mcp_config import MCPConfig
 from openhands.sdk.logger import get_logger
 from openhands.sdk.mcp.client import MCPClient
 
-# Re-export from canonical location — callers of mcp.utils.merge_mcp_configs
-# continue to work without changes.
+# Public re-export — merge_mcp_configs is defined in mcp.config and
+# exposed here as part of the mcp.utils public surface.
 from openhands.sdk.mcp.config import merge_mcp_configs as merge_mcp_configs
 from openhands.sdk.mcp.exceptions import MCPTimeoutError
 from openhands.sdk.mcp.tool import MCPToolDefinition
